@@ -1,0 +1,163 @@
+
+<html>
+<head>
+     <title>Titre  de la page</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+     <style type="text/css">
+	 body{
+	
+margin:0px;
+
+	 }
+	
+#header{
+ margin-top:30px; 
+background:#264c80;
+height:35px;
+}
+
+ #menu{
+background:#264c80;
+width:32%;
+height:100%;
+ margin-top:50px; 
+}
+li{
+padding:15px;
+}
+a{
+color:white;
+font-weight:bold;
+}
+ img{
+  width:90px;  
+  height:80px;  
+     margin-top:-30px; 
+   margin-left:200px; 
+  }
+ 
+#middle{ 
+
+background:#c9c3e3;
+width:70%;
+height:100%;
+margin-top:-660px;
+ margin-left:410px; 
+ } 
+ h1{
+ text-align:center;
+margin-bottom:50px;
+ }
+
+.form-group input[type= text],
+.form-group input[type= password  ]{
+  width:400px;
+
+  margin-left:250px;
+
+ 	 margin-bottom: 30px;
+
+   
+}
+ p{
+margin-left:250px;
+font-weight:bold;
+color:#264c80;
+}
+
+.form-group button{
+margin-left:250px;
+ margin-bottom: 30px;
+
+}
+span {
+margin-left:250px;
+
+ 
+ }
+ #header h5{
+  font-weight:bold ;
+  margin-top:-40px; 
+  margin-left:350px;
+  color:white;
+ }
+ </style>
+</head>
+<body>
+ 
+<div id="header">
+
+<img src="photo.png" > 
+ <h5>Faculté des sciences dhar el mehraz</h5>
+</div>
+
+ <div id="menu">
+<ul>
+<li><a href="Acceuil.html">Acceuil</a></li>
+<li><a href="Liste.html">Liste</a></li>
+<li><a href="Ajouter.html">Ajouter</a></li>
+<li><a href="Modifier.html">Modifier</a></li>
+<li><a href="Supprimer.html">Supprimer</a></li>
+</ul>
+</div>
+<div id="middle">
+<h1>Ajouter un étudiant</h1>
+<form method="post" action="Modifier.html" onsubmit="return valider() ">
+ 
+   <div class="form-group">
+      
+   
+	  <p>Code</p>
+	  <input type="password" id = "code" class="form-control" placeholder="Entrer votre code">
+	<span id="pass" class="text-danger"></span>
+ </div>
+  <div class="form-group">
+	  <p>Nom</p> 
+	  <input type="text" id="nom" class="form-control" placeholder="Entrer votre nom">
+  <span id="lname" class="text-danger"></span>
+ </div>
+ <div>
+   <div class="form-group">
+	 <p> Prenom </p>
+	  <input type="text" id="prenom" class="form-control" placeholder="Entrer votre prenom"></br></br>
+   <span id="fname" class="text-danger"></span>
+ </div>
+  <div class="form-group">
+ <button type="submit" class="btn btn-primary"  onclick="valider()">Enregistrer</button>
+ <button type="reset" class="btn btn-default"   >Annuler</button>
+  </div>
+	  </form>
+</div>	  
+
+	  <script type="text/javascript">
+function valider(){
+	var code = document.getElementById('code').value;
+	var nom = document.getElementById('nom').value;
+	var prenom = document.getElementById('prenom').value;
+	if(code==""){
+		document.getElementById('pass').innerHTML="Veuillez renseigner ce champ !";	
+return false;
+	}
+
+
+	 if(nom==""){
+		document.getElementById('lname').innerHTML="Veuillez renseigner ce champ !";	
+	return false;
+	}
+
+	if(prenom=="")
+	{
+		document.getElementById('fname').innerHTML="Veuillez renseigner ce champ !";	
+	return false;
+	}
+
+	
+}	
+
+<!-- window.onload=valider -->
+ </script>
+ 
+
+</body>
+</html>
